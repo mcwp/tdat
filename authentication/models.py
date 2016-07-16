@@ -51,7 +51,7 @@ class Account(AbstractBaseUser):
     REQUIRED_FIELDS = ['username']
 
     def __unicode__(self):
-        return self.email
+        return ' '.join([self.email, self.username])
 
     def get_full_name(self):
         return ' '.join([self.first_name, self.last_name])
